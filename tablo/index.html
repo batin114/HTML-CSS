@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <label>Etkinlik</label>
+    <input type="text" id="txtEtkinlik">
+    <label>Kişi Sayısı</label>
+    <input type="text" id="txtKisiSayisi">
+    <input type="submit" onclick="satirEkle()" value="Ekle">
+    <table>
+        <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Yaş</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+    <script>
+        var tableRow = '<td><input type="text" placeholder="ad"></td> <td><input type="text" placeholder="soyad"></td> <td><input type="text" placeholder="yas"></td>'
+
+        function satirEkle(params) {
+            var kisisayisi = parseInt(document.getElementById("txtKisiSayisi").value);
+            var tableBody = document.getElementById("tableBody");
+
+            for (let index = 0; index < kisisayisi; index++) {
+                tableBody.innerHTML += tableRow;
+
+            }
+        }
+    </script>
+</body>
+
+</html>

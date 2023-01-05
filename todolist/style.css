@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 400px;
+    height: auto;
+    border: 1px solid rgb(133, 133, 133);
+    background-color: aliceblue;
+    padding: 30px;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+input {
+    height: 40px;
+    font-size: 16px;
+}
+
+.Items-holder {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.red-text {
+    color: red;
+}
+
+.Items-holder .item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    padding: 15px 10px;
+    border: 1px solid darkslategray;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.item {
+    font-size: 24px;
+}
+
+
+/* .chek-item{
+
+} */

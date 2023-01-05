@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="btns">
+            <button id="arti" onclick="decrease()">-</button>
+            <span id="sonuc">0</span>
+            <button id="eksi" onclick="increase()">+</button>
+        </div>
+    </div>
+
+    <script>
+        var CounterText = document.getElementById("sonuc")
+        var value;
+
+        function increase() {
+            value = parseInt(CounterText.innerText)
+
+
+            if (value == 10) {
+                document.getElementById("sonuc").style.color = "green";
+                alert("üst limite ulaştınız")
+
+            } else {
+                CounterText.innerText = value + 1
+                document.getElementById("sonuc").style.color = "black";
+            }
+        }
+
+        function decrease() {
+            value = parseInt(CounterText.innerText)
+
+            if (value == 0) {
+                document.getElementById("sonuc").style.color = "red";
+                alert("alt limite ulaştınız")
+
+            } else {
+                CounterText.innerText = value - 1
+                document.getElementById("sonuc").style.color = "black";
+            }
+        }
+    </script>
+</body>
+
+
+</html>
